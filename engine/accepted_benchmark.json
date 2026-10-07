@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "name": "wrong-move-reference-v1",
+  "status": "accepted_reference_benchmark",
+  "accepted_on": "2026-09-11",
+  "acceptance": {
+    "retrospective": true,
+    "retuned_after_validation": false,
+    "primary_result": "15 of 15 held-out cells reproduce recommendation reversal and positive causal regret",
+    "conservative_audit": "13 of 15 held-out cells pass the complete auxiliary audit"
+  },
+  "source": {
+    "simulator_revision": "0c56017ac3a1cad42d551e35cc790bb7c8393a24",
+    "frozen_candidate_sha256": "37fc819c5a859ad472fd15016b34fdaed6484e7b55375c9af942b9f41eb99f40",
+    "validation_report_sha256": "488d328ec10206caddca04f704c47aa045f2689b2b1e0991b59997df26873c51",
+    "quota_calibration_file": "accepted_calibration.json",
+    "quota_calibration_sha256": "5be88991f51593476fe49ac69089b4753040135e566f738b13d3f5254e27a361",
+    "win_propensity_sha256": "c6d7308590d1327633e9ef2e8caa74a0e462439646182c49a99470730bd54dea",
+    "mechanics_sha256": {
+      "board.py": "96bc976d832f8b27ba53ef46bfc8c9f7c02a95606036a1ebd3914b37a5c5071e",
+      "causal_queries.py": "c27131d3a6efdaef7fb7f59227dcab599a53323b33f5e51762fcfbe2052f45d7",
+      "policy.py": "e47ffb2b8ac2782b1ab0e7efca210832513ccfad7f5518cc812605f78b4aeb09",
+      "retention.py": "f16f490b41677390addd688312951572c6b327e72e27e612b9cd77b737af3155",
+      "scm.py": "9a7435148a010769874b114459120d3631740822cb228ab96b5634f080ddce6e",
+      "spec.py": "22313e192c7bb169f2625a1a7502ca6b810e31fc6d44badcd10e33a993363674"
+    }
+  },
+  "candidate": {
+    "experience_initial": 0.3389184635818649,
+    "experience_target": 0.164262759633189,
+    "experience_update_rate": 0.553511867172367,
+    "levels": {
+      "orchard": {
+        "intercept": -11.95228973603845,
+        "experience_curvature_easy": 0.7399082077039942,
+        "experience_curvature_overchallenge": 1.2847704867520313,
+        "margin_curvature_easy": 35.98993720552555,
+        "margin_curvature_overchallenge": 66.34498111523541,
+        "margin_target": -0.13473217976862334
+      },
+      "harbour": {
+        "intercept": -9.316399275189841,
+        "experience_curvature_easy": 0.17810063157841124,
+        "experience_curvature_overchallenge": 0.30080257488180845,
+        "margin_curvature_easy": 28.544031059020828,
+        "margin_curvature_overchallenge": 45.90075543126402,
+        "margin_target": -0.06850300398162373
+      },
+      "foundry": {
+        "intercept": -9.299316921462278,
+        "experience_curvature_easy": 0.2755883650795542,
+        "experience_curvature_overchallenge": 1.1211178618583253,
+        "margin_curvature_easy": 33.911232087601945,
+        "margin_curvature_overchallenge": 73.16899131014536,
+        "margin_target": -0.1644139861290589
+      }
+    }
+  },
+  "regimes": {
+    "natural": {
+      "skill_gains": [1.9, 2.0, 1.8],
+      "sigmas": [0.8, 0.8, 0.8]
+    },
+    "randomized": {
+      "skill_gains": [0.0, 0.0, 0.0],
+      "sigmas": [2.0615528128088303, 2.1540659228538015, 1.969771560359221],
+      "matching": "Preserves natural marginal assignment variance conditional on level and baseline tier"
+    }
+  },
+  "dataset": {
+    "seed": 12011,
+    "split_seed": 12017,
+    "players": 2400,
+    "max_attempts": 20,
+    "shard_size": 240,
+    "split_fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    }
+  }
+}

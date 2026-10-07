@@ -1,0 +1,27 @@
+{
+  "default": "accepted",
+  "description": "Registered releases accepted by the loaders. Every loader hard-fails unless the root hashes, file count, and byte count match the entry. The data location must be supplied explicitly.",
+  "releases": {
+    "accepted": {
+      "benchmark": "wrong-move-reference-v1",
+      "bytes": 115342801,
+      "files": 84,
+      "generation_seed": 12011,
+      "hashes": {
+        "accepted_benchmark.json": "f3cf531d38948fae78ee06885ede881cbe4accc844c8c51ab3ce31732a5f43da",
+        "release-manifest.json": "35ba72770b54690b509ce4ae3fa2af1a3937e2ccca053fc9b4d7b1849f4ca58f",
+        "splits.json": "0a9dc9b0fe71f796d5750908e5bf523620bc85cab8509dc792b80b5f6abd19ce"
+      },
+      "local_root": "data/release",
+      "max_attempts": 20,
+      "name": "accepted",
+      "payload_commit": "8ad9a451109f6313ab4ed1f7795e1531a446d367",
+      "players_per_regime": 2400,
+      "qc_sha256": "733a122899361efd33a10fbf88baf1e7a823f3b08267d49c68241948c556d368",
+      "shard_size": 240,
+      "source": "accepted release payload",
+      "split_seed": 12017
+    }
+  },
+  "schema_version": 1
+}

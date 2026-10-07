@@ -1,0 +1,94 @@
+{
+  "bootstrap_unit": "whole players (causal_queries.bootstrap_engine_curves)",
+  "description": "Frozen decisions of the primary engine reference (stages 05-07). Protocol = the original cloned-population benchmark entry point engine_benchmark.evaluate_engine_benchmark on the pinned snapshot, with the accepted configuration injected through release.resolved_configs and the accepted quota calibration. Nothing here is tuned after seeing outcomes.",
+  "entry_point": "match3_simulator.engine_benchmark.evaluate_engine_benchmark",
+  "equivalence": {
+    "float_atol": 1e-09,
+    "n_bootstrap": 20,
+    "n_players": 48,
+    "note": "run A = pinned engine entry point, run B = packaged wrapper; discrete values exact, floats within float_atol; gate for stages 06-08",
+    "rollouts_per_player": 8,
+    "seed": 4409
+  },
+  "grid": {
+    "source": "spec.BENCHMARK_CONFIG.e_grid",
+    "values": [
+      -2.0,
+      -1.75,
+      -1.5,
+      -1.25,
+      -1.0,
+      -0.75,
+      -0.5,
+      -0.25,
+      0.0,
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      1.75,
+      2.0
+    ]
+  },
+  "intervention_audit": {
+    "max_engine_players": 128,
+    "n_players": 512,
+    "note": "direct per-e rollouts (one game per grid point) on a subset of the calibration cohort, compared with the quota-threshold protocol on the same players and rollout seeds; a documented comparison, not a replacement of the reference",
+    "reuse_goal_totals": false,
+    "rollouts_per_player": 8,
+    "seed": 8077
+  },
+  "intervention_semantics": "E enters the structural model only through the served goal quota (S0.goals_left); outcomes under do(E=e) are the quota-threshold outcomes of one full-budget game per replicate (reuse_goal_totals=True, the original protocol)",
+  "mc_calibration": {
+    "cohort_seed": 8077,
+    "cohort_seed_source": "configs/seeds.json (SHA-256 derived; not in the reserved set)",
+    "comparison": "each candidate R is compared with 2R on the same cohort (R = 256 has no comparator and is accepted only if nothing smaller passes)",
+    "criteria": {
+      "curve_change_definition": "max_e |g_R(e) - g_2R(e)|",
+      "curve_change_max": 0.005,
+      "mc_se_definition": "sqrt(sum_p var_r(h_p(e,r)) / R) / N at every grid point (replicate variance only, players fixed)",
+      "mc_se_max": 0.005,
+      "recommendation_rule": "e*_R == e*_2R, or every candidate optimum's neighbour cost g(e* +- 0.25) - g(e*) <= 0.005 on the 2R surface (flat minimum)",
+      "regret_change_definition": "|Regret_R(e_obs,R) - Regret_2R(e_obs,2R)| where Regret = g(e_obs) - g(e*) on the same surface",
+      "regret_change_max": 0.005
+    },
+    "floor": 32,
+    "n_players": 512,
+    "prefix_rule": "rollout seeds SeedSequence([exogenous_seed, r]) do not depend on R, so R = 16 / 32 / 64 / 128 are exact prefixes of the R = 256 surface",
+    "r_candidates": [
+      16,
+      32,
+      64,
+      128,
+      256
+    ],
+    "r_max": 256,
+    "selection": "final R = smallest candidate passing every criterion against its doubling on all three levels, with floor 32"
+  },
+  "n_bootstrap": 500,
+  "n_players": 512,
+  "name": "engine_reference",
+  "observational_quantity": "assignment-weighted engine conditional expectation m_obs(e) from compare_engine_curves (natural assignment density); the HF empirical binned churn-vs-logged-E curve is a separate diagnostic named empirical_logged_churn_by_E",
+  "protocol": "original_cloned_population_benchmark",
+  "regime": "natural",
+  "schema_version": 1,
+  "tie_rule": "causal_queries.select_grid_optimum reused unchanged: candidates = grid[np.isclose(values, min, atol=1e-12)] (default rtol), then smallest |e|, then smallest e",
+  "validation": {
+    "gates": "every gate of the original comparison_report + bootstrap interval gates (engine_level_report): gap >= 1.0, causal contrast >= 0.02, obs contrast <= -0.02, shoulders >= 0.01, ESS fraction >= 0.20, max weight <= 0.01, intervals exclude 0",
+    "label": "new estimates (new R, 512 players); the historical 15/15 and 13/15 counts cannot currently be verified",
+    "n_bootstrap": 500,
+    "n_players": 512,
+    "rollouts_per_player": "chosen by mc_calibration (written to runs/engine_reference/mc_calibration/decision.json)",
+    "seeds": [
+      4409,
+      5519,
+      6637,
+      7753,
+      8861
+    ],
+    "seeds_source": "spec.BENCHMARK_CONFIG.validation_seeds"
+  },
+  "workers": 10
+}

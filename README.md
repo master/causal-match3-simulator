@@ -1,67 +1,63 @@
-# Causal Match-3 Simulator
+# CaLA: Causal Latent Adjustment for World Models under Adaptive Policies
 
-A match-3 simulator specified as an explicit causal generative model. The model
-is the data-generating process, providing known ground truth for causal inference
-and world-model experiments.
+## Structure
 
-## Model
+The repository has the following structure:
 
-- `L`: level context
-- `D`: baseline difficulty tier
-- `K`: latent player-skill segment
-- `E`: difficulty served by the DDA policy
-- `S_t`: board state, goal colour, moves remaining, and goals remaining
-- `A_t`: adjacent-tile swap
-- `X`: behavioural proxies for `K`
-- `R`: indicator that the player completed the level within the move budget
+| Folder / file | Contents |
+|---|---|
+| `engine/` | Original match-3 simulator with the accepted calibration and benchmark |
+| `src/world_modeling/` | World-modeling components (Transformer, LeJEPA, and LeWM) |
+| `src/cala/` | Variational CaLA and other adjustment arms, policies, rollouts, and evaluation |
+| `scripts/` | Scripts that reproduce the experiments and export tables and figures |
+| `GENERATE_DATA.md` | Data-generation and preparation instructions |
 
-The simulator targets `P(R = 1 | do(E = e), L = l)`. In the observational data,
-the DDA serves harder levels to stronger players, while skill also improves move
-selection. Consequently, `P(R | E)` differs from `P(R | do(E))`.
+## Setup
 
-## Install
+Use Python >=3.10 and a CUDA-enabled PyTorch installation for training.
+From this folder:
 
 ```bash
-pip install -e .
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e .
 ```
 
-## Use
+Run all commands below from the repository root. Start with
+`GENERATE_DATA.md` to prepare the data and the two engine references.
 
-```python
-import pyro
-import match3_simulator as match3
+## Run the experiments
 
-pyro.set_rng_seed(0)
-episode = match3.ground_truth_model(
-    level=match3.LEVELS[0],
-    player=match3.SEGMENTS[2],
-    E=0.0,
-)
-print(episode.R, episode.moves_used, episode.served_goal_count)
-```
-
-Generate a dataset:
+The commands operate on one job at a time. `--list` prints every job and its
+index; repeat the command with the corresponding `--job` indices.
 
 ```bash
-match3-simulate -n 2000 --out data
+# World models: (3 families x 3 sizes x 3 seeds).
+python scripts/02_world_models.py --list
+python scripts/02_world_models.py --action train --job 0 --device cuda
+python scripts/02_world_models.py --action evaluate --job 0 --device cuda
+
+# Special-aware adjustment/policy fits.
+python scripts/03_train_adjustment.py --list
+python scripts/03_train_adjustment.py --job 0 --device cuda
+
+# Freeze checkpoints, validation evaluations, nuisances and configuration hashes.
+python scripts/04_freeze.py --groups main
+
+# Special-policy imagined cells and evaluation.
+python scripts/05_rollouts.py --group main --list
+python scripts/05_rollouts.py --group main --job 0 --device cuda
+python scripts/06_evaluate.py --route WM --group main --job 0
+
 ```
 
-Render an episode:
+## Generate paper outputs
+
+To regenerate all tables used in the paper, run:
 
 ```bash
-match3-video --seed 12 --level orchard --segment regular \
-  --E 0 --out episode.mp4 --json episode.json --thumb opening.png
+python scripts/07_tables_figures.py --group main
+python scripts/08_descriptive_tables.py benchmark
+python scripts/08_descriptive_tables.py world-models
+python scripts/08_descriptive_tables.py data
 ```
-
-Recalibrate the mapping from served difficulty to goal count:
-
-```bash
-python -m match3_simulator.calibrate --n 150
-```
-
-## Causal controls
-
-`ground_truth_model(dda_gain=...)` controls how strongly the assignment policy
-adapts difficulty to skill. `ground_truth_model(e_sigma=...)` controls residual
-within-stratum variation in served difficulty. Passing `E=e` clamps the treatment
-and samples from `do(E=e)`.

@@ -4,26 +4,30 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "causal-match3-simulator"
-version = "0.1.0"
-description = "A causal generative match-3 simulator for world-model experiments"
+version = "0.2.0"
+description = "CaLA research code for the pinned match-3 simulator"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = [
-    "numpy>=1.24",
-    "torch>=2.0",
-    "pyro-ppl>=1.9",
-    "pygame>=2.5",
-]
+dependencies = ["numpy>=1.24", "torch>=2.0", "pyro-ppl>=1.9", "pygame>=2.5", "pandas>=2", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+download = ["huggingface-hub>=0.24"]
 
 [project.scripts]
-match3-video = "match3_simulator.video:main"
+match3-release = "match3_simulator.release:main"
 match3-simulate = "match3_simulator.simulate:main"
 
 [tool.setuptools]
-packages = ["match3_simulator"]
-
+packages = ["match3_simulator", "match3_simulator.learned_model", "match3_simulator.world_modeling", "match3_simulator.experiments", "match3_simulator.evaluation", "match3_simulator.scripts"]
 [tool.setuptools.package-dir]
-match3_simulator = "."
+"match3_simulator" = "engine"
+"match3_simulator.learned_model" = "engine/learned_model"
+"match3_simulator.world_modeling" = "src/world_modeling"
+"match3_simulator.experiments" = "src/cala"
+"match3_simulator.evaluation" = "src/cala/evaluation"
+"match3_simulator.scripts" = "scripts"
 
 [tool.setuptools.package-data]
-match3_simulator = ["calibration.json"]
+match3_simulator = ["*.json"]
+"match3_simulator.experiments" = ["configs/*.json", "configs/training/*/*.json"]

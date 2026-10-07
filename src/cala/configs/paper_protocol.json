@@ -1,0 +1,114 @@
+{
+  "seeds": [
+    4201,
+    4202,
+    4203
+  ],
+  "regimes": [
+    "natural",
+    "randomized"
+  ],
+  "grid": [
+    -2.0,
+    -1.75,
+    -1.5,
+    -1.25,
+    -1.0,
+    -0.75,
+    -0.5,
+    -0.25,
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0
+  ],
+  "landmark": 20,
+  "world_model": {
+    "main": "transformer-14.8M",
+    "kernel_seed": 4201,
+    "families": [
+      "transformer",
+      "jepa",
+      "lewm"
+    ],
+    "bands": [
+      "1.0M",
+      "5.2M",
+      "14.8M"
+    ],
+    "lewm_rollout": "reencode",
+    "training_updates": 11400
+  },
+  "arms": [
+    "handcrafted",
+    "det_z",
+    "var_z"
+  ],
+  "training": {
+    "max_updates": 12000,
+    "kl_weight": 0.01,
+    "latent_dimensions": 4,
+    "early_stopping": "validation total loss",
+    "temperature_grid": [
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.7,
+      0.85,
+      1,
+      1.25
+    ]
+  },
+  "main_wm_policy": {
+    "handcrafted": "special",
+    "det_z": "special",
+    "var_z": "special"
+  },
+  "temperature": "fit on training players using Transformer-5.2M-4201; reuse per-arm fitted value",
+  "rollout": {
+    "trajectories": 128,
+    "posterior": "sample",
+    "var_z_S": 16,
+    "var_z_B": 8,
+    "other_S": 1,
+    "other_B": 128,
+    "logged_candidate": true
+  },
+  "logged_reference": {
+    "R": 128,
+    "seed": 0,
+    "opening": "logged attempt-20 board and specials",
+    "population": "eligible HF split at logged level"
+  },
+  "estimator": {
+    "version": 2,
+    "bandwidth": 0.75,
+    "density_floor": 0.02,
+    "individual_support_threshold": 0.01,
+    "direct_epochs": 400,
+    "folds": 5,
+    "bootstrap": 2000,
+    "individual_policy": "WM-MC surface shared with WM-DR; Direct-DR uses direct plug-in surface"
+  },
+  "reporting": {
+    "seed_sd_ddof": 1,
+    "weighted_mae": "weight levels by players",
+    "population_regret": "unweighted mean over three levels",
+    "individual_regret": "pool players within seed"
+  },
+  "paper_map": {
+    "1": "five-seed cloned-cohort benchmark",
+    "3": "main equal-budget WM-MC/WM-DR",
+    "4-7": "dataset statistics",
+    "8": "world-model predictive comparison",
+    "11": "per-level WM-MC",
+    "12": "WM-DR per level"
+  },
+  "scope": "Special-aware history-arm subset; not a reproduction of original-policy comparisons"
+}

@@ -1,0 +1,977 @@
+{
+  "calibration": {
+    "n": 1000,
+    "runtime_seconds": 357.14602387500054,
+    "seed": 0
+  },
+  "code_sha": "0c56017ac3a1cad42d551e35cc790bb7c8393a24",
+  "grid": [
+    -6.0,
+    -5.5,
+    -5.0,
+    -4.5,
+    -4.0,
+    -3.5,
+    -3.0,
+    -2.5,
+    -2.0,
+    -1.5,
+    -1.0,
+    -0.5,
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0
+  ],
+  "status": "provisional_striped_extended_support",
+  "table": {
+    "foundry": {
+      "curve": [
+        {
+          "E": -6.0,
+          "goal_count": 5,
+          "pass_rate": 0.998
+        },
+        {
+          "E": -5.5,
+          "goal_count": 6,
+          "pass_rate": 0.997
+        },
+        {
+          "E": -5.0,
+          "goal_count": 7,
+          "pass_rate": 0.993
+        },
+        {
+          "E": -4.5,
+          "goal_count": 9,
+          "pass_rate": 0.991
+        },
+        {
+          "E": -4.0,
+          "goal_count": 10,
+          "pass_rate": 0.978
+        },
+        {
+          "E": -3.5,
+          "goal_count": 12,
+          "pass_rate": 0.972
+        },
+        {
+          "E": -3.0,
+          "goal_count": 12,
+          "pass_rate": 0.972
+        },
+        {
+          "E": -2.5,
+          "goal_count": 13,
+          "pass_rate": 0.927
+        },
+        {
+          "E": -2.0,
+          "goal_count": 15,
+          "pass_rate": 0.901
+        },
+        {
+          "E": -1.5,
+          "goal_count": 16,
+          "pass_rate": 0.804
+        },
+        {
+          "E": -1.0,
+          "goal_count": 18,
+          "pass_rate": 0.749
+        },
+        {
+          "E": -0.5,
+          "goal_count": 19,
+          "pass_rate": 0.625
+        },
+        {
+          "E": 0.0,
+          "goal_count": 21,
+          "pass_rate": 0.554
+        },
+        {
+          "E": 0.5,
+          "goal_count": 23,
+          "pass_rate": 0.39
+        },
+        {
+          "E": 1.0,
+          "goal_count": 25,
+          "pass_rate": 0.271
+        },
+        {
+          "E": 1.5,
+          "goal_count": 27,
+          "pass_rate": 0.2
+        },
+        {
+          "E": 2.0,
+          "goal_count": 29,
+          "pass_rate": 0.104
+        },
+        {
+          "E": 2.5,
+          "goal_count": 30,
+          "pass_rate": 0.084
+        },
+        {
+          "E": 3.0,
+          "goal_count": 32,
+          "pass_rate": 0.051
+        },
+        {
+          "E": 3.5,
+          "goal_count": 33,
+          "pass_rate": 0.034
+        },
+        {
+          "E": 4.0,
+          "goal_count": 35,
+          "pass_rate": 0.019
+        },
+        {
+          "E": 4.5,
+          "goal_count": 37,
+          "pass_rate": 0.011
+        },
+        {
+          "E": 5.0,
+          "goal_count": 38,
+          "pass_rate": 0.007
+        },
+        {
+          "E": 5.5,
+          "goal_count": 40,
+          "pass_rate": 0.004
+        },
+        {
+          "E": 6.0,
+          "goal_count": 43,
+          "pass_rate": 0.002
+        }
+      ],
+      "goal_colour": 1,
+      "move_budget": 20,
+      "n": 1000,
+      "seed": 0
+    },
+    "harbour": {
+      "curve": [
+        {
+          "E": -6.0,
+          "goal_count": 12,
+          "pass_rate": 0.998
+        },
+        {
+          "E": -5.5,
+          "goal_count": 12,
+          "pass_rate": 0.998
+        },
+        {
+          "E": -5.0,
+          "goal_count": 13,
+          "pass_rate": 0.992
+        },
+        {
+          "E": -4.5,
+          "goal_count": 14,
+          "pass_rate": 0.99
+        },
+        {
+          "E": -4.0,
+          "goal_count": 15,
+          "pass_rate": 0.983
+        },
+        {
+          "E": -3.5,
+          "goal_count": 16,
+          "pass_rate": 0.965
+        },
+        {
+          "E": -3.0,
+          "goal_count": 17,
+          "pass_rate": 0.954
+        },
+        {
+          "E": -2.5,
+          "goal_count": 18,
+          "pass_rate": 0.94
+        },
+        {
+          "E": -2.0,
+          "goal_count": 20,
+          "pass_rate": 0.883
+        },
+        {
+          "E": -1.5,
+          "goal_count": 22,
+          "pass_rate": 0.805
+        },
+        {
+          "E": -1.0,
+          "goal_count": 24,
+          "pass_rate": 0.749
+        },
+        {
+          "E": -0.5,
+          "goal_count": 26,
+          "pass_rate": 0.618
+        },
+        {
+          "E": 0.0,
+          "goal_count": 28,
+          "pass_rate": 0.509
+        },
+        {
+          "E": 0.5,
+          "goal_count": 31,
+          "pass_rate": 0.36
+        },
+        {
+          "E": 1.0,
+          "goal_count": 33,
+          "pass_rate": 0.27
+        },
+        {
+          "E": 1.5,
+          "goal_count": 35,
+          "pass_rate": 0.191
+        },
+        {
+          "E": 2.0,
+          "goal_count": 37,
+          "pass_rate": 0.126
+        },
+        {
+          "E": 2.5,
+          "goal_count": 39,
+          "pass_rate": 0.078
+        },
+        {
+          "E": 3.0,
+          "goal_count": 41,
+          "pass_rate": 0.051
+        },
+        {
+          "E": 3.5,
+          "goal_count": 43,
+          "pass_rate": 0.029
+        },
+        {
+          "E": 4.0,
+          "goal_count": 46,
+          "pass_rate": 0.017
+        },
+        {
+          "E": 4.5,
+          "goal_count": 47,
+          "pass_rate": 0.012
+        },
+        {
+          "E": 5.0,
+          "goal_count": 49,
+          "pass_rate": 0.007
+        },
+        {
+          "E": 5.5,
+          "goal_count": 52,
+          "pass_rate": 0.004
+        },
+        {
+          "E": 6.0,
+          "goal_count": 54,
+          "pass_rate": 0.002
+        }
+      ],
+      "goal_colour": 1,
+      "move_budget": 20,
+      "n": 1000,
+      "seed": 0
+    },
+    "orchard": {
+      "curve": [
+        {
+          "E": -6.0,
+          "goal_count": 18,
+          "pass_rate": 0.997
+        },
+        {
+          "E": -5.5,
+          "goal_count": 18,
+          "pass_rate": 0.997
+        },
+        {
+          "E": -5.0,
+          "goal_count": 19,
+          "pass_rate": 0.991
+        },
+        {
+          "E": -4.5,
+          "goal_count": 19,
+          "pass_rate": 0.991
+        },
+        {
+          "E": -4.0,
+          "goal_count": 21,
+          "pass_rate": 0.981
+        },
+        {
+          "E": -3.5,
+          "goal_count": 21,
+          "pass_rate": 0.981
+        },
+        {
+          "E": -3.0,
+          "goal_count": 23,
+          "pass_rate": 0.951
+        },
+        {
+          "E": -2.5,
+          "goal_count": 24,
+          "pass_rate": 0.941
+        },
+        {
+          "E": -2.0,
+          "goal_count": 26,
+          "pass_rate": 0.887
+        },
+        {
+          "E": -1.5,
+          "goal_count": 28,
+          "pass_rate": 0.827
+        },
+        {
+          "E": -1.0,
+          "goal_count": 31,
+          "pass_rate": 0.71
+        },
+        {
+          "E": -0.5,
+          "goal_count": 33,
+          "pass_rate": 0.625
+        },
+        {
+          "E": 0.0,
+          "goal_count": 35,
+          "pass_rate": 0.517
+        },
+        {
+          "E": 0.5,
+          "goal_count": 38,
+          "pass_rate": 0.381
+        },
+        {
+          "E": 1.0,
+          "goal_count": 41,
+          "pass_rate": 0.264
+        },
+        {
+          "E": 1.5,
+          "goal_count": 44,
+          "pass_rate": 0.17
+        },
+        {
+          "E": 2.0,
+          "goal_count": 46,
+          "pass_rate": 0.121
+        },
+        {
+          "E": 2.5,
+          "goal_count": 49,
+          "pass_rate": 0.069
+        },
+        {
+          "E": 3.0,
+          "goal_count": 51,
+          "pass_rate": 0.047
+        },
+        {
+          "E": 3.5,
+          "goal_count": 54,
+          "pass_rate": 0.029
+        },
+        {
+          "E": 4.0,
+          "goal_count": 58,
+          "pass_rate": 0.018
+        },
+        {
+          "E": 4.5,
+          "goal_count": 60,
+          "pass_rate": 0.012
+        },
+        {
+          "E": 5.0,
+          "goal_count": 63,
+          "pass_rate": 0.007
+        },
+        {
+          "E": 5.5,
+          "goal_count": 64,
+          "pass_rate": 0.005
+        },
+        {
+          "E": 6.0,
+          "goal_count": 67,
+          "pass_rate": 0.002
+        }
+      ],
+      "goal_colour": 1,
+      "move_budget": 20,
+      "n": 1000,
+      "seed": 0
+    }
+  },
+  "validation": {
+    "levels": {
+      "foundry": [
+        {
+          "E": -6.0,
+          "absolute_error": 0.002472623156634657,
+          "goal_count": 5,
+          "observed": 1.0,
+          "target": 0.9975273768433653
+        },
+        {
+          "E": -5.5,
+          "absolute_error": 0.004070137715896038,
+          "goal_count": 6,
+          "observed": 1.0,
+          "target": 0.995929862284104
+        },
+        {
+          "E": -5.0,
+          "absolute_error": 0.0026928509242847287,
+          "goal_count": 7,
+          "observed": 0.996,
+          "target": 0.9933071490757153
+        },
+        {
+          "E": -4.5,
+          "absolute_error": 0.005986942630593184,
+          "goal_count": 9,
+          "observed": 0.995,
+          "target": 0.9890130573694068
+        },
+        {
+          "E": -4.0,
+          "absolute_error": 1.3790037908467667e-05,
+          "goal_count": 10,
+          "observed": 0.982,
+          "target": 0.9820137900379085
+        },
+        {
+          "E": -3.5,
+          "absolute_error": 0.00631223075135634,
+          "goal_count": 12,
+          "observed": 0.977,
+          "target": 0.9706877692486436
+        },
+        {
+          "E": -3.0,
+          "absolute_error": 0.024425873177566615,
+          "goal_count": 12,
+          "observed": 0.977,
+          "target": 0.9525741268224334
+        },
+        {
+          "E": -2.5,
+          "absolute_error": 0.005858180021243498,
+          "goal_count": 13,
+          "observed": 0.93,
+          "target": 0.9241418199787566
+        },
+        {
+          "E": -2.0,
+          "absolute_error": 0.016202922022117705,
+          "goal_count": 15,
+          "observed": 0.897,
+          "target": 0.8807970779778823
+        },
+        {
+          "E": -1.5,
+          "absolute_error": 0.008574476193643599,
+          "goal_count": 16,
+          "observed": 0.809,
+          "target": 0.8175744761936437
+        },
+        {
+          "E": -1.0,
+          "absolute_error": 0.0040585786300049165,
+          "goal_count": 18,
+          "observed": 0.727,
+          "target": 0.7310585786300049
+        },
+        {
+          "E": -0.5,
+          "absolute_error": 0.034459331201854626,
+          "goal_count": 19,
+          "observed": 0.588,
+          "target": 0.6224593312018546
+        },
+        {
+          "E": 0.0,
+          "absolute_error": 0.0010000000000000009,
+          "goal_count": 21,
+          "observed": 0.501,
+          "target": 0.5
+        },
+        {
+          "E": 0.5,
+          "absolute_error": 0.03854066879814538,
+          "goal_count": 23,
+          "observed": 0.339,
+          "target": 0.3775406687981454
+        },
+        {
+          "E": 1.0,
+          "absolute_error": 0.03694142136999509,
+          "goal_count": 25,
+          "observed": 0.232,
+          "target": 0.2689414213699951
+        },
+        {
+          "E": 1.5,
+          "absolute_error": 0.01542552380635634,
+          "goal_count": 27,
+          "observed": 0.167,
+          "target": 0.18242552380635635
+        },
+        {
+          "E": 2.0,
+          "absolute_error": 0.038202922022117544,
+          "goal_count": 29,
+          "observed": 0.081,
+          "target": 0.11920292202211755
+        },
+        {
+          "E": 2.5,
+          "absolute_error": 0.010858180021243544,
+          "goal_count": 30,
+          "observed": 0.065,
+          "target": 0.07585818002124355
+        },
+        {
+          "E": 3.0,
+          "absolute_error": 0.017425873177566782,
+          "goal_count": 32,
+          "observed": 0.03,
+          "target": 0.04742587317756678
+        },
+        {
+          "E": 3.5,
+          "absolute_error": 0.004312230751356318,
+          "goal_count": 33,
+          "observed": 0.025,
+          "target": 0.02931223075135632
+        },
+        {
+          "E": 4.0,
+          "absolute_error": 0.0039862099620915584,
+          "goal_count": 35,
+          "observed": 0.014,
+          "target": 0.01798620996209156
+        },
+        {
+          "E": 4.5,
+          "absolute_error": 0.0059869426305931795,
+          "goal_count": 37,
+          "observed": 0.005,
+          "target": 0.01098694263059318
+        },
+        {
+          "E": 5.0,
+          "absolute_error": 0.0036928509242848554,
+          "goal_count": 38,
+          "observed": 0.003,
+          "target": 0.0066928509242848554
+        },
+        {
+          "E": 5.5,
+          "absolute_error": 0.004070137715896128,
+          "goal_count": 40,
+          "observed": 0.0,
+          "target": 0.004070137715896128
+        },
+        {
+          "E": 6.0,
+          "absolute_error": 0.0024726231566347743,
+          "goal_count": 43,
+          "observed": 0.0,
+          "target": 0.0024726231566347743
+        }
+      ],
+      "harbour": [
+        {
+          "E": -6.0,
+          "absolute_error": 0.00047262315663465504,
+          "goal_count": 12,
+          "observed": 0.998,
+          "target": 0.9975273768433653
+        },
+        {
+          "E": -5.5,
+          "absolute_error": 0.0020701377158960366,
+          "goal_count": 12,
+          "observed": 0.998,
+          "target": 0.995929862284104
+        },
+        {
+          "E": -5.0,
+          "absolute_error": 0.0016928509242847278,
+          "goal_count": 13,
+          "observed": 0.995,
+          "target": 0.9933071490757153
+        },
+        {
+          "E": -4.5,
+          "absolute_error": 0.0019869426305931803,
+          "goal_count": 14,
+          "observed": 0.991,
+          "target": 0.9890130573694068
+        },
+        {
+          "E": -4.0,
+          "absolute_error": 0.00898620996209154,
+          "goal_count": 15,
+          "observed": 0.991,
+          "target": 0.9820137900379085
+        },
+        {
+          "E": -3.5,
+          "absolute_error": 0.0026877692486436677,
+          "goal_count": 16,
+          "observed": 0.968,
+          "target": 0.9706877692486436
+        },
+        {
+          "E": -3.0,
+          "absolute_error": 0.004425873177566597,
+          "goal_count": 17,
+          "observed": 0.957,
+          "target": 0.9525741268224334
+        },
+        {
+          "E": -2.5,
+          "absolute_error": 0.025858180021243404,
+          "goal_count": 18,
+          "observed": 0.95,
+          "target": 0.9241418199787566
+        },
+        {
+          "E": -2.0,
+          "absolute_error": 0.013202922022117702,
+          "goal_count": 20,
+          "observed": 0.894,
+          "target": 0.8807970779778823
+        },
+        {
+          "E": -1.5,
+          "absolute_error": 0.011574476193643601,
+          "goal_count": 22,
+          "observed": 0.806,
+          "target": 0.8175744761936437
+        },
+        {
+          "E": -1.0,
+          "absolute_error": 0.008941421369995095,
+          "goal_count": 24,
+          "observed": 0.74,
+          "target": 0.7310585786300049
+        },
+        {
+          "E": -0.5,
+          "absolute_error": 0.010540668798145414,
+          "goal_count": 26,
+          "observed": 0.633,
+          "target": 0.6224593312018546
+        },
+        {
+          "E": 0.0,
+          "absolute_error": 0.02200000000000002,
+          "goal_count": 28,
+          "observed": 0.522,
+          "target": 0.5
+        },
+        {
+          "E": 0.5,
+          "absolute_error": 0.020540668798145423,
+          "goal_count": 31,
+          "observed": 0.357,
+          "target": 0.3775406687981454
+        },
+        {
+          "E": 1.0,
+          "absolute_error": 0.005058578630004917,
+          "goal_count": 33,
+          "observed": 0.274,
+          "target": 0.2689414213699951
+        },
+        {
+          "E": 1.5,
+          "absolute_error": 0.009574476193643655,
+          "goal_count": 35,
+          "observed": 0.192,
+          "target": 0.18242552380635635
+        },
+        {
+          "E": 2.0,
+          "absolute_error": 0.006797077977882454,
+          "goal_count": 37,
+          "observed": 0.126,
+          "target": 0.11920292202211755
+        },
+        {
+          "E": 2.5,
+          "absolute_error": 0.003141819978756455,
+          "goal_count": 39,
+          "observed": 0.079,
+          "target": 0.07585818002124355
+        },
+        {
+          "E": 3.0,
+          "absolute_error": 0.0014258731775667818,
+          "goal_count": 41,
+          "observed": 0.046,
+          "target": 0.04742587317756678
+        },
+        {
+          "E": 3.5,
+          "absolute_error": 0.0003122307513563176,
+          "goal_count": 43,
+          "observed": 0.029,
+          "target": 0.02931223075135632
+        },
+        {
+          "E": 4.0,
+          "absolute_error": 0.004986209962091559,
+          "goal_count": 46,
+          "observed": 0.013,
+          "target": 0.01798620996209156
+        },
+        {
+          "E": 4.5,
+          "absolute_error": 0.0019869426305931803,
+          "goal_count": 47,
+          "observed": 0.009,
+          "target": 0.01098694263059318
+        },
+        {
+          "E": 5.0,
+          "absolute_error": 0.0003071490757151447,
+          "goal_count": 49,
+          "observed": 0.007,
+          "target": 0.0066928509242848554
+        },
+        {
+          "E": 5.5,
+          "absolute_error": 7.01377158961276e-05,
+          "goal_count": 52,
+          "observed": 0.004,
+          "target": 0.004070137715896128
+        },
+        {
+          "E": 6.0,
+          "absolute_error": 0.0004726231566347743,
+          "goal_count": 54,
+          "observed": 0.002,
+          "target": 0.0024726231566347743
+        }
+      ],
+      "orchard": [
+        {
+          "E": -6.0,
+          "absolute_error": 0.0035273768433653485,
+          "goal_count": 18,
+          "observed": 0.994,
+          "target": 0.9975273768433653
+        },
+        {
+          "E": -5.5,
+          "absolute_error": 0.001929862284103967,
+          "goal_count": 18,
+          "observed": 0.994,
+          "target": 0.995929862284104
+        },
+        {
+          "E": -5.0,
+          "absolute_error": 0.010307149075715283,
+          "goal_count": 19,
+          "observed": 0.983,
+          "target": 0.9933071490757153
+        },
+        {
+          "E": -4.5,
+          "absolute_error": 0.006013057369406827,
+          "goal_count": 19,
+          "observed": 0.983,
+          "target": 0.9890130573694068
+        },
+        {
+          "E": -4.0,
+          "absolute_error": 0.007013790037908474,
+          "goal_count": 21,
+          "observed": 0.975,
+          "target": 0.9820137900379085
+        },
+        {
+          "E": -3.5,
+          "absolute_error": 0.0043122307513563385,
+          "goal_count": 21,
+          "observed": 0.975,
+          "target": 0.9706877692486436
+        },
+        {
+          "E": -3.0,
+          "absolute_error": 0.002574126822433409,
+          "goal_count": 23,
+          "observed": 0.95,
+          "target": 0.9525741268224334
+        },
+        {
+          "E": -2.5,
+          "absolute_error": 0.018858180021243398,
+          "goal_count": 24,
+          "observed": 0.943,
+          "target": 0.9241418199787566
+        },
+        {
+          "E": -2.0,
+          "absolute_error": 0.016202922022117705,
+          "goal_count": 26,
+          "observed": 0.897,
+          "target": 0.8807970779778823
+        },
+        {
+          "E": -1.5,
+          "absolute_error": 0.008425523806356305,
+          "goal_count": 28,
+          "observed": 0.826,
+          "target": 0.8175744761936437
+        },
+        {
+          "E": -1.0,
+          "absolute_error": 0.03805857863000495,
+          "goal_count": 31,
+          "observed": 0.693,
+          "target": 0.7310585786300049
+        },
+        {
+          "E": -0.5,
+          "absolute_error": 0.009540668798145413,
+          "goal_count": 33,
+          "observed": 0.632,
+          "target": 0.6224593312018546
+        },
+        {
+          "E": 0.0,
+          "absolute_error": 0.03400000000000003,
+          "goal_count": 35,
+          "observed": 0.534,
+          "target": 0.5
+        },
+        {
+          "E": 0.5,
+          "absolute_error": 0.006459331201854601,
+          "goal_count": 38,
+          "observed": 0.384,
+          "target": 0.3775406687981454
+        },
+        {
+          "E": 1.0,
+          "absolute_error": 0.00805857863000492,
+          "goal_count": 41,
+          "observed": 0.277,
+          "target": 0.2689414213699951
+        },
+        {
+          "E": 1.5,
+          "absolute_error": 0.0004255238063563538,
+          "goal_count": 44,
+          "observed": 0.182,
+          "target": 0.18242552380635635
+        },
+        {
+          "E": 2.0,
+          "absolute_error": 0.0007970779778824488,
+          "goal_count": 46,
+          "observed": 0.12,
+          "target": 0.11920292202211755
+        },
+        {
+          "E": 2.5,
+          "absolute_error": 0.0038581800212435513,
+          "goal_count": 49,
+          "observed": 0.072,
+          "target": 0.07585818002124355
+        },
+        {
+          "E": 3.0,
+          "absolute_error": 0.0025741268224332217,
+          "goal_count": 51,
+          "observed": 0.05,
+          "target": 0.04742587317756678
+        },
+        {
+          "E": 3.5,
+          "absolute_error": 0.0036877692486436825,
+          "goal_count": 54,
+          "observed": 0.033,
+          "target": 0.02931223075135632
+        },
+        {
+          "E": 4.0,
+          "absolute_error": 0.01098620996209156,
+          "goal_count": 58,
+          "observed": 0.007,
+          "target": 0.01798620996209156
+        },
+        {
+          "E": 4.5,
+          "absolute_error": 0.0069869426305931796,
+          "goal_count": 60,
+          "observed": 0.004,
+          "target": 0.01098694263059318
+        },
+        {
+          "E": 5.0,
+          "absolute_error": 0.004692850924284855,
+          "goal_count": 63,
+          "observed": 0.002,
+          "target": 0.0066928509242848554
+        },
+        {
+          "E": 5.5,
+          "absolute_error": 0.0030701377158961277,
+          "goal_count": 64,
+          "observed": 0.001,
+          "target": 0.004070137715896128
+        },
+        {
+          "E": 6.0,
+          "absolute_error": 0.0024726231566347743,
+          "goal_count": 67,
+          "observed": 0.0,
+          "target": 0.0024726231566347743
+        }
+      ]
+    },
+    "maximum_absolute_error": 0.03854066879814538,
+    "mean_absolute_error": 0.009093202701714733,
+    "n": 1000,
+    "seed": 100003
+  },
+  "validation_runtime_seconds": 353.1199727919993
+}
